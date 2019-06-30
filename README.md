@@ -14,31 +14,56 @@
 
 Write code that prints all the numbers from 1 to 150, **inclusive.**
 
+for num in 1...150 {
+print (num)
+}
 ***
 ## Question 2
 
 Write code that prints all the numbers from 142 to 159, **exclusive.**
 
+for num in 142...159 {
+print (num)
+}
 ***
 ## Question 3
 
 Write code that prints only the even numbers from 15 to 80, **inclusive.**
 
+let Range = 15...80
+for EvenNumber in Range {
+if EvenNumber % 2==0 {
+print ( EvenNumber)
+}
+}
 ***
 ## Question 4
 
 Write code that prints only the odd numbers from 19 to 51, **inclusive.**
+
+let Range = 19...51
+for oddNumber in Range {
+if oddNumber % 2==1 {
+print ( oddNumber)
+}
+}
 
 ***
 ## Question 5
 
 Write code that prints all the numbers that end in a **5** from 1 to 100, **exclusive.**
 
+for number in 1...100 where number % 10 == 5 {
+print(number)
+}
 ***
 ## Question 6
 
 Write code that prints all the numbers that end in a 7 from 1 to 40, **inclusive.**
 
+for number in 1...40 where number % 10 == 7 {
+print(number)
+}
 ***
 ## Question 7
 
@@ -46,6 +71,9 @@ Given a range of numbers from 20 to 150 inclusive, print out all the numbers tha
 
 `Numbers that are divisible by 3`
 
+for number in 20...150 where number % 3 == 0 {
+print(number)
+}
 ***
 ## Question 8
 
@@ -53,6 +81,9 @@ Given a range of numbers from 20 to 150 inclusive, print out all the numbers tha
 
 `Numbers that are divisible by 2 and 3`
 
+for number in 20...150 where number % 2 == 0 && number % 3==0 {
+print(number)
+}
 ***
 ## Question 9
 
@@ -60,6 +91,9 @@ Given a range of numbers from 20 to 150 inclusive, print out all the numbers tha
 
 `Numbers that end with a 4`
 
+for number in 20...150 where number % 10 == 4 {
+print(number)
+}
 ***
 ## Question 10
 
@@ -80,7 +114,7 @@ while (i > 3) {
 }
 
 // Your explanation here
-```
+```Because 5 will always be greater than 3 it will be an infinite loop
 
 ***
 ## Question 12
@@ -92,6 +126,15 @@ var i = 5
 
 while (i > 3) {
     i += 1
+}
+
+var i = 5
+
+while (i > 3) {
+i += 1
+if i == 9{
+break
+}
 }
 ```
 
@@ -105,6 +148,15 @@ var i = 5
 
 while (i > 3) {
     i += 1
+}
+
+var i = 5
+
+while (i > 3) {
+i += 1
+if i == 1005{
+break
+}
 }
 ```
 
@@ -121,6 +173,16 @@ while (i > 3) {
 }
 ```
 
+var i = 5
+
+while (i > 3) {
+i += 1
+if i == 1005 {
+break
+}       else if i % 2 == 0 {
+print (i)
+}
+}
 ***
 ## Question 15
 
@@ -148,6 +210,10 @@ repeat {
 
 What's the difference between `break` and `continue`?  Give an example that demonstrates their differences.
 
+Break stops once it finds what it is looking forwithin a loop it will leave and work outside the loop.
+
+Continue stops as soon as it finds the answer and continue to work within the loop, but never passing the mark that it was instucted to find.
+
 ***
 ## Question 17
 
@@ -166,8 +232,8 @@ for i in 1...10 {
 []2
 []3
 []4
-[]5
-[]6
+[*]5*
+[*]6*
 []7
 []8
 []9
@@ -191,7 +257,7 @@ for i in 1...10 {
 []2
 []3
 []4
-[]5
+[*]5*
 []6
 []7
 []8
@@ -241,6 +307,17 @@ Output:
 25
 ```
 
+var N = 5
+let power = 2
+var answer = 1
+
+for _ in 1...power {
+answer *= N
+}
+
+print(answer)
+
+ ( found this syntax in the syllabus)
 ***
 ## Question 23
 
